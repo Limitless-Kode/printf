@@ -6,8 +6,28 @@
 #include <unistd.h>
 
 int _putchar(char c);
-int _putstring(char *str);
-int _putint(int n);
+int _puts(char *str);
+int print_char(va_list l);
+
+int print_string(va_list l);
+
+int count_digit(int i);
+void print_number(int n);
+int _putint(va_list l);
+
 int _printf(const char *format, ...);
+
+int (*get_print(char s))(va_list);
+
+/**
+ * struct printHandler - struct to choose the right function depending
+ * on the format specifier passed to _printf()
+ * @c: format specifier
+ */
+typedef struct PrintHandler
+{
+  char c;
+  int (*f)(va_list ap);
+} PrintHandler;
 
 #endif /* MAIN_H */
