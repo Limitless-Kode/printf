@@ -7,11 +7,15 @@
  */
 int _putstring(char *str)
 {
+if (str == NULL)
+{
+return (0);
+}
 int i;
 for (i = 0; str[i] != '\0'; i++)
 {
 _putchar(str[i]);
 }
-
 return (i);
 }
+
