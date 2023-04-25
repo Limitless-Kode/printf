@@ -7,6 +7,7 @@
 
 int _putchar(char c);
 int _putstring(char *str);
+int _putint(int n);
 int _printf(const char *format, ...);
 
 #endif /* MAIN_H */
