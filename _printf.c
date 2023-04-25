@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /**
  * _printf - writes formatted output to stdout
  * @format: The format string
@@ -46,7 +44,6 @@ count += _putchar(format[i]);
 
 i++;
 }
-
 va_end(args);
 return (count);
 }
