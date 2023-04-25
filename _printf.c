@@ -10,15 +10,12 @@ int _printf(const char *format, ...)
 va_list args;
 int i = 0;
 int count = 0;
-
 va_start(args, format);
-
 while (format && format[i])
 {
 if (format[i] == '%')
 {
 i++;
-
 switch (format[i])
 {
 case 'c':
@@ -43,7 +40,6 @@ break;
 }
 else
 count += _putchar(format[i]);
-
 i++;
 }
 va_end(args);
