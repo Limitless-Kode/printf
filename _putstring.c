@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _putstring - writes a string to the standard output
  * @str: The string to print
@@ -9,7 +8,6 @@
 int _putstring(char *str)
 {
 int i;
-
 for (i = 0; str[i] != '\0'; i++)
 {
 _putchar(str[i]);
