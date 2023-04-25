@@ -32,6 +32,10 @@ count += _putchar('%');
 break;
 count += _putoctal(va_arg(args, unsigned int));
 break;
+case 'd':
+case 'i':
+count += _putint(va_arg(args, int));
+break;
 default:
 count += _putchar('%');
 if (format[i])
