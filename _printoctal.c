@@ -11,10 +11,10 @@
  */
 int print_octal(va_list l)
 {
-  unsigned int num = va_arg(l, unsigned int);
-  char *str = _convert(num, 8, 0);
-  int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = _convert(num, 8, 0);
+int count = 0;
 
-  count += _puts(str);
-  return (count);
+count += _puts(str);
+return (count);
 }

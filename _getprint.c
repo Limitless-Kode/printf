@@ -21,7 +21,8 @@ PrintHandler func_arr[] = {
 {'s', print_string},
 {'c', print_char},
 {'d', _putint},
-{'%', print_char}};
+{'%', print_char}
+};
 int flags = 14;
 
 register int i;

@@ -16,4 +16,3 @@ _putchar(str[i]);
 
 return (i);
 }
-
