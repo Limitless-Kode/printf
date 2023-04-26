@@ -8,7 +8,7 @@
 */
 int _putint(va_list l)
 {
-int n = va_arg(l, int);
+long int n = va_arg(l, int);
 int res = count_digit(n);
 
 if (n < 0)
