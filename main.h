@@ -25,11 +25,11 @@ int (*get_print(char s))(va_list);
 int _putbinary(unsigned int n);
 
 /**
-  * struct printHandler - struct to choose the right function depending
-  * on the format specifier passed to _printf()
-  * @c: format specifier
-  * @f: pointer to the function method
-  */
+* struct printHandler - struct to choose the right function depending
+* on the format specifier passed to _printf()
+* @c: format specifier
+* @f: pointer to the function method
+*/
 typedef struct PrintHandler
 {
 char c;

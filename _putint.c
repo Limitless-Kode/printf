@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-  * _putint - puts an an int to stdout
-  *
-  * @l: va_list argument
-  * Return: Always 0 (Success)
-  */
+* _putint - puts an an int to stdout
+*
+* @l: va_list argument
+* Return: Always 0 (Success)
+*/
 int _putint(va_list l)
 {
 int n = va_arg(l, int);
