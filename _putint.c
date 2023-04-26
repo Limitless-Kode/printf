@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
 * _putint - puts an an int to stdout
 *
 * @l: va_list argument
-* Return: Always 0 (Success)
+* Return: number of digits printed
 */
 int _putint(va_list l)
 {
@@ -13,7 +14,6 @@ int res = count_digit(n);
 print_number(n);
 return (res);
 }
-
 
 /**
  * print_number - helper function that loops through
@@ -37,7 +37,6 @@ print_number(n1 / 10);
 _putchar((n1 % 10) + '0');
 }
 
-
 /**
  * count_digit - returns the number of digits in an integer
  * for _printf
@@ -50,13 +49,25 @@ unsigned int d = 0;
 unsigned int u;
 
 if (i < 0)
+{
+_putchar('-');
 u = i * -1;
+}
 else
 u = i;
+
+if (u == 0)
+{
+_putchar('0');
+return (1);
+}
+
 while (u != 0)
 {
 u /= 10;
 d++;
 }
+
 return (d);
 }
+
