@@ -10,12 +10,12 @@
  */
 int print_hex(va_list l)
 {
-  unsigned int num = va_arg(l, unsigned int);
-  char *str = _convert(num, 16, 1);
-  int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = _convert(num, 16, 1);
+int count = 0;
 
-  count += _puts(str);
-  return (count);
+count += _puts(str);
+return (count);
 }
 
 /**
@@ -28,10 +28,10 @@ int print_hex(va_list l)
  */
 int print_hex_big(va_list l)
 {
-  unsigned int num = va_arg(l, unsigned int);
-  char *str = _convert(num, 16, 0);
-  int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = _convert(num, 16, 0);
+int count = 0;
 
-  count += _puts(str);
-  return (count);
+count += _puts(str);
+return (count);
 }
