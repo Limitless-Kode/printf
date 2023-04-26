@@ -13,6 +13,9 @@
 int (*get_print(char s))(va_list)
 {
 PrintHandler func_arr[] = {
+{'o', print_octal},
+{'x', print_hex},
+{'X', print_hex_big},
 {'u', _putunsigned},
 {'i', _putint},
 {'s', print_string},

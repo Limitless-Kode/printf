@@ -15,6 +15,10 @@ int count_digit(int i);
 void print_number(int n);
 int _putint(va_list l);
 int _putunsigned(va_list l);
+int print_octal(va_list l);
+int print_hex(va_list l);
+int print_hex_big(va_list l);
+
 int _printf(const char *format, ...);
 
 /* converter */
