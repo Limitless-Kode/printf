@@ -49,10 +49,10 @@ _putchar((n1 % 10) + '0');
  * @i: integer to evaluate
  * Return: number of digits
  */
-int count_digit(int i)
+int count_digit(long int i)
 {
 int d = 0;
-unsigned int u;
+unsigned long int u;
 
 if (i < 0)
 {
