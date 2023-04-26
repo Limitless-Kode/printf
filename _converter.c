@@ -5,6 +5,7 @@
  * @num: input number
  * @base: input base
  * @lowercase: flag if hexa values need to be lowercase
+ * Description: converts number and base into string
  * Return: result string
  */
 char *_convert(unsigned long int num, int base, int lowercase)
