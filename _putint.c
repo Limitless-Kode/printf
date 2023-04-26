@@ -57,7 +57,7 @@ _putchar((n1 % 10) + '0');
 int count_digit(int i)
 {
 int d = 0;
-unsigned long int u;
+unsigned int u;
 
 if (i < 0)
 {
