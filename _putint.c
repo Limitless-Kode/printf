@@ -11,6 +11,11 @@ int _putint(va_list l)
 int n = va_arg(l, int);
 int res = count_digit(n);
 
+if (n < 0)
+{
+_putchar('-');
+n = -n;
+}
 print_number(n);
 return (res);
 }
@@ -45,20 +50,21 @@ _putchar((n1 % 10) + '0');
  */
 int count_digit(int i)
 {
-unsigned int d = 0;
+int d = 0;
 unsigned int u;
 
 if (i < 0)
 {
-_putchar('-');
-u = i * -1;
+d++;
+u = -i;
 }
 else
+{
 u = i;
+}
 
 if (u == 0)
 {
-_putchar('0');
 return (1);
 }
 
