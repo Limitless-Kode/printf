@@ -8,9 +8,7 @@
 int _putchar(char c);
 int _puts(char *str);
 int print_char(va_list l);
-
 int print_string(va_list l);
-
 int count_digit(int i);
 void print_number(int n);
 int _putint(va_list l);
@@ -18,17 +16,13 @@ int _putunsigned(va_list l);
 int print_octal(va_list l);
 int print_hex(va_list l);
 int print_hex_big(va_list l);
-
 int _printf(const char *format, ...);
-
 /* converter */
 char *_convert(unsigned long int num, int base, int lowercase);
-
 int (*get_print(char s))(va_list);
-
-int _putbinary(unsigned int n);
-
+int _putbinary(va_list l);
 int _print_address(va_list l);
+void _print_binary(unsigned int n);
 
 /**
 * struct printHandler - struct to choose the right function depending

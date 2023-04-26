@@ -22,13 +22,17 @@ PrintHandler func_arr[] = {
 {'c', print_char},
 {'d', _putint},
 {'p', _print_address},
-{'%', print_char}};
-int flags = 10;
+{'b', _putbinary},
+{'%', print_char},
+};
+int flags = 12;
 
 register int i;
 
 for (i = 0; i < flags; i++)
+{
 if (func_arr[i].c == s)
 return (func_arr[i].f);
+}
 return (NULL);
 }
