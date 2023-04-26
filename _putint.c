@@ -2,18 +2,19 @@
 /**
   * _putint - puts an an int to stdout
   *
-  * @n: the integer to print
+  * @l: va_list argument
   * Return: Always 0 (Success)
   */
-int _putint(va_list l){
-  int n = va_arg(l, int);
-	int res = count_digit(n);
+int _putint(va_list l)
+{
+int n = va_arg(l, int);
+int res = count_digit(n);
 
-	print_number(n);
-	return (res);
+print_number(n);
+return (res);
 }
 
-  
+
 /**
  * print_number - helper function that loops through
  * an integer and prints all its digits
@@ -21,19 +22,19 @@ int _putint(va_list l){
  */
 void print_number(int n)
 {
-	unsigned int n1;
+unsigned int n1;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n1 = -n;
-	}
-	else
-		n1 = n;
+if (n < 0)
+{
+_putchar('-');
+n1 = -n;
+}
+else
+n1 = n;
 
-	if (n1 / 10)
-		print_number(n1 / 10);
-	_putchar((n1 % 10) + '0');
+if (n1 / 10)
+print_number(n1 / 10);
+_putchar((n1 % 10) + '0');
 }
 
 
@@ -45,17 +46,17 @@ void print_number(int n)
  */
 int count_digit(int i)
 {
-	unsigned int d = 0;
-	unsigned int u;
+unsigned int d = 0;
+unsigned int u;
 
-	if (i < 0)
-		u = i * -1;
-	else
-		u = i;
-	while (u != 0)
-	{
-		u /= 10;
-		d++;
-	}
-	return (d);
+if (i < 0)
+u = i * -1;
+else
+u = i;
+while (u != 0)
+{
+u /= 10;
+d++;
+}
+return (d);
 }

@@ -10,45 +10,47 @@
  */
 int _putchar(char c)
 {
-	static char buf[1024];
-	static int i;
+static char buf[1024];
+static int i;
 
-	if (c == -1 || i >= 1024)
-	{
-		write(1, &buf, i);
-		i = 0;
-	}
-	if (c != -1)
-	{
-		buf[i] = c;
-		i++;
-	}
-	return (1);
+if (c == -1 || i >= 1024)
+{
+write(1, &buf, i);
+i = 0;
+}
+if (c != -1)
+{
+buf[i] = c;
+i++;
+}
+return (1);
 }
 
 
 /**
  * print_char - prints a character
  * @l: va_list arguments from _printf
+ * Return: On success 1
  */
 int print_char(va_list l)
 {
-	_putchar(va_arg(l, int));
-	return (1);
+_putchar(va_arg(l, int));
+return (1);
 }
 
 /**
  * print_string - loops through a string and prints
  * every character
  * @l: va_list arguments from _printf
+ * Return: on success char
  */
 int print_string(va_list l)
 {
-	char *s = va_arg(l, char *);
+char *s = va_arg(l, char *);
 
-	if (!s)
-		s = "(null)";
-	return (_puts(s));
+if (!s)
+s = "(null)";
+return (_puts(s));
 }
 
 /**
@@ -58,10 +60,10 @@ int print_string(va_list l)
  */
 int _puts(char *str)
 {
-	register int i;
+register int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
-	return (i);
+for (i = 0; str[i] != '\0'; i++)
+_putchar(str[i]);
+return (i);
 }
 
