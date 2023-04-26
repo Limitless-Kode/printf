@@ -23,7 +23,7 @@ PrintHandler func_arr[] = {
 {'d', _putint},
 {'p', _print_address},
 {'%', print_char}};
-int flags = 14;
+int flags = 10;
 
 register int i;
 

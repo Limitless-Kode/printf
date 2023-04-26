@@ -35,3 +35,4 @@ int count = 0;
 count += _puts(str);
 return (count);
 }
+
