@@ -8,8 +8,8 @@
  */
 int _putunsigned(va_list l)
 {
-  unsigned int u = va_arg(l, unsigned int);
-  char *str = _convert(u, 10, 0);
+unsigned int u = va_arg(l, unsigned int);
+char *str = _convert(u, 10, 0);
 
-  return (_puts(str));
+return (_puts(str));
 }
