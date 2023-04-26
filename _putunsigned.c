@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_unsigned - prints an unsigned integer
+ * _putunsigned - prints an unsigned integer
  * @l: va_list of arguments from _printf
  * if a flag is passed to _printf
  * Return: number of char printed
