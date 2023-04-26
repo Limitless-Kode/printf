@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
  * _putbinary - puts an an unsigned int as binary to stdout
  *
  * @n: the value to convert to binary
  * Return: Number of binary digits printed
  */
-
 unsigned int count_binary_digits(unsigned int n);
 
 int _putbinary(va_list l)
