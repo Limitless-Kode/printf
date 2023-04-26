@@ -20,14 +20,15 @@ int _printf(const char *format, ...);
 int (*get_print(char s))(va_list);
 
 /**
- * struct printHandler - struct to choose the right function depending
- * on the format specifier passed to _printf()
- * @c: format specifier
- */
+  * struct printHandler - struct to choose the right function depending
+  * on the format specifier passed to _printf()
+  * @c: format specifier
+  * @f: pointer to the function method
+  */
 typedef struct PrintHandler
 {
-  char c;
-  int (*f)(va_list ap);
+char c;
+int (*f)(va_list ap);
 } PrintHandler;
 
 #endif /* MAIN_H */
