@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-  * _putbinary - converts an int to binary format
-  * @n: the integer to convert to binary
-  *
-  * Return: the count
-  */
+* _putbinary - converts an int to binary format
+* @n: the integer to convert to binary
+*
+* Return: the count
+*/
 
 int _putbinary(unsigned int n)
 {
