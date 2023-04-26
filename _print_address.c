@@ -9,15 +9,15 @@
  */
 int _print_address(va_list l)
 {
-  char *str;
-  unsigned long int p = va_arg(l, unsigned long int);
+char *str;
+unsigned long int p = va_arg(l, unsigned long int);
 
-  register int count = 0;
+register int count = 0;
 
-  if (!p)
-    return (_puts("(nil)"));
-  str = convert(p, 16, 1);
-  count += _puts("0x");
-  count += _puts(str);
-  return (count);
+if (!p)
+return (_puts("(nil)"));
+str = _convert(p, 16, 1);
+count += _puts("0x");
+count += _puts(str);
+return (count);
 }
