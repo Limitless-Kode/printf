@@ -8,7 +8,7 @@
 */
 int _putint(va_list l)
 {
-long int n = va_arg(l, int);
+long int n = va_arg(l, long int);
 int res = count_digit(n);
 
 if (n < 0)
@@ -16,8 +16,14 @@ if (n < 0)
 _putchar('-');
 n = -n;
 }
+if (n >= 10)
+{
+res += _putint(n/10);
+}
 
-print_number(n);
+_putchar((n % 10) + '0');
+
+/* print_number(n); */
 return (res);
 }
 
