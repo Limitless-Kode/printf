@@ -22,6 +22,8 @@ char *_convert(unsigned long int num, int base, int lowercase);
 
 int (*get_print(char s))(va_list);
 
+int _putbinary(unsigned int n);
+
 /**
   * struct printHandler - struct to choose the right function depending
   * on the format specifier passed to _printf()
