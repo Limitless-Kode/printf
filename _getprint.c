@@ -12,18 +12,19 @@
  */
 int (*get_print(char s))(va_list)
 {
-PrintHandler func_arr[] = {
-{'i', _putint},
-{'s', print_string},
-{'c', print_char},
-{'d', _putint},
-{'%', print_char}};
-int flags = 14;
+  PrintHandler func_arr[] = {
+      {'u', _putunsigned},
+      {'i', _putint},
+      {'s', print_string},
+      {'c', print_char},
+      {'d', _putint},
+      {'%', print_char}};
+  int flags = 14;
 
-register int i;
+  register int i;
 
-for (i = 0; i < flags; i++)
-if (func_arr[i].c == s)
-return (func_arr[i].f);
-return (NULL);
+  for (i = 0; i < flags; i++)
+    if (func_arr[i].c == s)
+      return (func_arr[i].f);
+  return (NULL);
 }

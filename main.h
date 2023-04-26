@@ -14,8 +14,11 @@ int print_string(va_list l);
 int count_digit(int i);
 void print_number(int n);
 int _putint(va_list l);
-
+int _putunsigned(va_list l);
 int _printf(const char *format, ...);
+
+/* converter */
+char *_convert(unsigned long int num, int base, int lowercase);
 
 int (*get_print(char s))(va_list);
 
